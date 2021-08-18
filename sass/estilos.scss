@@ -1,0 +1,493 @@
+@import url(responsive.css);
+html,
+body {
+    background-image: url(../imagenes/fondo.png);
+    background-attachment: fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+//Navbar
+.navbar {
+    .ov-btn-slide-bottom {
+        margin: 15px;
+        background: #fff;
+        color: #fa0;
+        border: 1px solid #4741d7;
+        padding: 16px 20px;
+        border-radius: 3px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display: inline-block;
+        text-decoration: none;
+    }
+    .ov-btn-slide-bottom:hover {
+        color: #fa0;
+    }
+    .ov-btn-slide-bottom::after {
+        content: "";
+        background: black;
+        /* color de fondo hover */
+        position: absolute;
+        z-index: -1;
+        padding: 16px 20px;
+        display: block;
+        left: 0;
+        right: 0;
+        top: 100%;
+        bottom: -100%;
+        -webkit-transition: all 0.30s;
+        transition: all 0.30s;
+    }
+    .ov-btn-slide-bottom:hover::after {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        -webkit-transition: all 0.35s;
+        transition: all 0.35s;
+    }
+    display: flex;
+    .navbar {
+        width: 2000px;
+        .logo {
+            list-style-type: none;
+            .container-fluid {
+                list-style-type: none;
+                padding-right: 443px;
+                .nav-item {
+                    color: white;
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
+}
+
+.filtro {
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #212529;
+    border-radius: 10px;
+    .titulo-filtro {
+        font-size: 30px;
+        color: #dc3545;
+        padding-right: 20px;
+        margin-left: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
+
+.div-carrito {
+    #boton-carrito {
+        margin-left: 1200px;
+        list-style: none;
+        height: 60px;
+    }
+}
+
+#detalles {
+    margin-left: 370px;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.total-compra {
+    border: 1px solid #212529;
+    margin-top: 8px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.titulo-card {
+    margin: 50px;
+    padding: 5px;
+    background-size: 100px;
+    text-align: center;
+    border-radius: 10px;
+    color: #dc3545;
+    background-color: #212529;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#titulo-ventana {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    margin-left: 45px;
+    text-align: center;
+    color: #dc3545;
+    text-decoration: underline;
+}
+
+.Marcas {
+    display: flex;
+    justify-content: center;
+    background: white;
+    list-style-type: none;
+    margin-top: 30px;
+    .tituloM {
+        margin: 20px;
+        font-size: 30px;
+        color: black;
+        align-items: flex-start;
+        margin-top: 50px;
+        text-decoration: none;
+        .marca_w {
+            margin-right: 55px;
+            flex-wrap: nowrap;
+            background: white;
+        }
+    }
+}
+
+
+/** ====================
+* Pie de Página
+=======================*/
+
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    color: white;
+    background-color: #212529;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+    .container-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        .aboutUs {
+            width: 15%;
+            margin-bottom: 30px;
+            h2 {
+                position: relative;
+                color: #fff;
+                font-weight: 500;
+                margin-bottom: 15px;
+                h2::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 50%;
+                    height: 2px;
+                    background: #fa0;
+                }
+            }
+        }
+    }
+}
+
+.titulo-footer {
+    text-decoration: underline;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: column;
+    li {
+        margin-right: 10px;
+        margin-bottom: 20px;
+        a {
+            color: white;
+        }
+    }
+}
+
+.quickboton {
+    display: flex;
+    flex-direction: column;
+    margin-right: 290px;
+    list-style: disc;
+    ul {
+        li {
+            margin-bottom: 10px;
+            a {
+                color: white;
+            }
+        }
+    }
+}
+
+.contacto {
+    ul {
+        li {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+/** ====================
+   * Contacto.html
+   =======================*/
+
+
+/** ====================
+   * Grids
+   =======================*/
+
+.tituloPreguntas {
+    font-size: 35px;
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.tituloPreguntas img {
+    width: 100%;
+    list-style-type: square;
+}
+
+.container-frecuentes {
+    display: grid;
+    grid-template-columns: (1, 1fr);
+    gap: 1em;
+    grid-template-rows: minmax(100px, auto);
+}
+
+.container-frecuentes div {
+    padding: 1em;
+    background-color: #212529;
+    margin: 5px;
+    color: white;
+}
+
+div {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    display: list-item;
+}
+
+.preguntas {
+    color: white;
+    font-family: "Dela Gothic One", cursive;
+    text-decoration: underline;
+}
+
+
+/** ====================
+* Grids 2da Parte
+=======================*/
+
+.ayuda {
+    text-decoration: underline;
+    font-size: 20px;
+    display: grid;
+    gap: 10px;
+    color: burlywood;
+}
+
+.msjauto {
+    display: grid;
+    grid-template-columns: (6, 1fr);
+    grid-template-rows: (1, 1fr);
+    justify-items: center;
+    margin: 20px;
+}
+
+.msjauto a {
+    border: 1px solid;
+    text-align: center;
+    background: white;
+    margin: 20px;
+}
+
+.msjauto a:hover {
+    background: black;
+}
+
+#text-area {
+    margin-left: 450px;
+    text-align: center;
+}
+
+#boton-text-area {
+    margin-left: 850px;
+}
+
+input {
+    font-size: 20px;
+    .input:hover {
+        color: blue;
+    }
+}
+
+ul {
+    list-style-type: disc;
+}
+
+
+/**
+   * registrar.html
+   ---------------------------*/
+
+h4 {
+    color: black;
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 50px;
+    text-decoration: underline;
+}
+
+.container-inicio {
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 50px;
+    background: white;
+    border-radius: 3%;
+    list-style-type: none;
+}
+
+.contraseña {
+    margin-bottom: 25px;
+}
+
+.boton {
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+
+/**
+* Registrar
+---------------------------*/
+
+#form {
+    width: 600px;
+    height: 800px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 50px;
+    background: white;
+    border-radius: 3%;
+    list-style-type: none;
+}
+
+.boton2 {
+    height: 40px;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+#divCarrito {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: black;
+    background: cadetblue;
+    margin-top: 50px;
+    margin-left: 330px;
+}
+
+.modal-header {
+    list-style-type: none;
+    .modal-body {
+        list-style-type: none;
+    }
+}
+
+
+/**
+   * Sobre Nosotros
+   ---------------------------*/
+
+.articulo__titulo {
+    margin-top: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 3em;
+    letter-spacing: normal;
+    color: cadetblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+
+@mixin div {
+    letter-spacing: normal;
+    text-align: center;
+    margin: 50px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+@mixin imagen {
+    width: 50%;
+    border: 15px solid black;
+}
+
+@mixin texto {
+    color: burlywood;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+}
+
+.articulo__divUno {
+    @include div();
+}
+
+.articulo__imagenUno {
+    @include imagen();
+}
+
+.articulo__textUno {
+    @include texto();
+}
+
+.articulo__divDos {
+    @include div();
+}
+
+.articulo__imagenDos {
+    @include imagen();
+}
+
+.articulo__textDos {
+    @include texto();
+}
+
+.articulo__divTres {
+    @include div();
+}
+
+.articulo__imagenTres {
+    @include imagen();
+}
+
+.articulo__textTres {
+    @include texto();
+}

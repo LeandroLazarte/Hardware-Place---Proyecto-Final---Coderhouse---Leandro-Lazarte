@@ -1,0 +1,169 @@
+                 /* Hardware Place Responsive */
+                 /******Index.html******/
+                 
+                 @media (min-width: 320px) and (max-width:991px) {
+                     body {
+                         overflow-x: hidden !important;
+                         width: 100% !important;
+                         position: absolute;
+                     }
+                 }
+                 
+                 @media (min-width: 320px) and (max-width:1400px) {
+                     .d-flex {
+                         width: 100%;
+                         display: flex;
+                     }
+                     .nav-item {
+                         width: 100% !important;
+                         display: flex;
+                         flex-direction: column;
+                         align-items: center;
+                         border: 5px solid violet;
+                         margin-bottom: 5px;
+                     }
+                 }
+                 
+                 @media (min-width: 320px) and (max-width:991px) {
+                     .carousel-inner {
+                         width: 100%;
+                     }
+                 }
+                 
+                 @media (min-width: 320px) and (max-width:991px) {
+                     .logo img {
+                         width: 200px !important;
+                         height: 200px !important;
+                     }
+                 }
+                 
+                 @media (min-width: 320px) and (max-width:991px) {
+                     footer {
+                         display: flex;
+                         flex-direction: column;
+                         padding: 10px 50px !important;
+                         width: 100%;
+                     }
+                     footer .container-footer {
+                         width: 100% !important;
+                         text-align: left !important;
+                     }
+                     footer .container-footer .aboutUs {
+                         width: 100% !important;
+                     }
+                     footer .container-footer .socialMedia {
+                         flex-direction: column;
+                     }
+                 }
+                 
+                 @media (min-width: 320px) and (max-width:991px) {
+                     .Marcas {
+                         width: 100%;
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: center;
+                         align-items: center;
+                         padding: 10px 22px;
+                     }
+                     .Marcas .tituloM {
+                         width: 100%;
+                         text-align: center !important;
+                     }
+                     .Marcas .tituloM .marca_w {
+                         width: 100% !important;
+                     }
+                 }
+                 /******Productos.html******/
+                 
+                 @media (min-width: 320px) and (max-width: 991px) {
+                     .flex-card2 {
+                         display: flex;
+                         flex-wrap: wrap;
+                     }
+                     .container2 {
+                         margin: 20.5px auto!important;
+                         width: 100%;
+                         flex-direction: column;
+                     }
+                     .container2 .d-flex {
+                         display: flex!important;
+                         justify-content: center!important;
+                     }
+                     .placa_de_video {
+                         font-size: 10vw;
+                     }
+                     .flex-card2 div {
+                         width: 100%;
+                         margin: 5px auto;
+                     }
+                     .Page {
+                         width: 100%;
+                     }
+                 }
+                 /******SobreNosotros.html******/
+                 
+                 @media (min-width: 320px) and (max-width:991px) {
+                     .articulo_titulo {
+                         display: flex;
+                         flex-wrap: wrap;
+                     }
+                     .articulo__divUno {
+                         margin: 20.5px auto !important;
+                         width: 100%;
+                     }
+                     .articulo_imagenUno {
+                         height: 100px !important;
+                         width: 100px;
+                     }
+                     .articulo_textUno {
+                         flex-direction: column;
+                         width: 100%;
+                     }
+                     .articulo__divDos {
+                         margin: 20.5px auto !important;
+                         width: 100%;
+                     }
+                     .articulo__divUno {
+                         margin: 20.5px auto !important;
+                         width: 100%;
+                     }
+                 }
+                 /******Contacto.html******/
+                 
+                 @media (min-width: 320px) and (max-width:991px) {
+                     .tituloPreguntas {
+                         display: flex;
+                         flex-direction: column;
+                     }
+                 }
+                 
+                 @media (min-width: 320px) and (max-width:1200px) {
+                     .container-frecuentes {
+                         width: 100%;
+                         height: auto;
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: center;
+                         align-items: center;
+                     }
+                 }
+                 /******Registro******/
+                 
+                 @media (min-width: 320px) and (max-width:991px) {
+                     .container-inicio {
+                         display: flex;
+                         justify-content: center;
+                         align-items: center;
+                         width: 70% !important;
+                     }
+                 }
+                 
+                 @media (min-width: 320px) and (max-width:991px) {
+                     .formulario {
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: center;
+                         align-items: center;
+                         width: 70% !important;
+                     }
+                 }

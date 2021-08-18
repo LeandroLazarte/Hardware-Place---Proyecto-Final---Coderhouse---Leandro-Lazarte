@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./sass/estilos.css">
+    <link rel="stylesheet" href="./sass/responsive.css">
+    <title>Hardware Place/El mejor lugar para tu computadora</title>
+</head>
+
+<body>
+    <header>
+        <!-- Menu de Navegación -->
+        <nav class="navbar navbar-expand-xxl navbar navbar-dark bg-dark w-100">
+            <div class="logo">
+                <a href="index.html"><img src="./imagenes/Logo.png" alt="Logo empresarial"></a>
+            </div>
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-5 my-lg-0">
+                        <li class="nav-item">
+                            <a href="./index.html" class="ov-btn-slide-bottom">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./sobreNosotros.html" class="ov-btn-slide-bottom">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contacto.html" class="ov-btn-slide-bottom">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./registrar.html" class="ov-btn-slide-bottom">Registrar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="0" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+                <h5 id="titulo-ventana">Detalles de la Compra</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <!-- Vaciar/Finalizar -->
+            <div style="margin-left: 60px; list-style-type: none;">
+                <button type="button" id="detalle-compra1" class="btn btn-danger " onclick="verCompra();">Finalizar Compra</button>
+                <button type="button" id="detalle-compra" class="btn btn-danger" onclick="vaciarCarrito();">Vaciar Carrito</button>
+                <div class="total-compra" style="list-style-type: none;">Total $ <span id="total"></span></div>
+            </div>
+            <div class="offcanvas-body">
+                <div class="col-4" id="esquema" style="list-style-type: none"></div>
+            </div>
+        </div>
+    </header>
+    <!-- Carousel de Imágenes -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        </div>
+        <hr>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./imagenes/banner1.jpg" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagenes/banner2.jpg" class="d-block w-100" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagenes/banner3.jpg" class="d-block w-100" alt="Imagen 3">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagenes/banner4.jpg" class="d-block w-100" alt="Imagen 4">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagenes/banner5.jpg" class="d-block w-100" alt="Imagen 5">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagenes/banner6.jpg" class="d-block w-100" alt="Imagen 6">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagenes/banner7.jpg" class="d-block w-100" alt="Imagen 7">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagenes/banner8.jpg" class="d-block w-100" alt="Imagen 8">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+    </div>
+    <!-- Titulo -->
+    <h1 class="titulo-card">Productos Destacados <i class="fas fa-bookmark"></i></h1>
+    <!-- Filtro de busqueda -->
+    <div class="filtro">
+        <h2 class="titulo-filtro">Filtro de busqueda</h2>
+        <div class="btn-group">
+            <div class="dropdown" style="list-style-type: none;">
+                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                 Ordenar Por
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                    <li><button id="button-filtro" class="dropdown-item" onclick="cargaProductos()" type="button">Relevantes</button></li>
+                    <li><button id="button-filtro" class="dropdown-item" onclick="menorMayor()" type="button">Menor Precio</button></li>
+                    <li><button id="button-filtro" class="dropdown-item" onclick="mayorMenor()" type="button">Mayor Precio</button></li>
+                </ul>
+            </div>
+            <div class="dropdown" style="list-style-type: none; margin-left: 5px;">
+                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorias
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                    <li><button id="button-filtro" class="dropdown-item" onclick="cargaProductos()" type="button">Todos</button></li>
+                    <li><button id="button-filtro" class="dropdown-item" onclick="filtrarProducto('Monitor')" type="button">Monitores</button></li>
+                    <li><button id="button-filtro" class="dropdown-item" onclick="filtrarProducto('Graficas')" type="button">Graficas</button></li>
+                    <li><button id="button-filtro" class="dropdown-item" onclick="filtrarProducto('Fuentes')" type="button">Fuentes</button></li>
+                    <li><button id="button-filtro" class="dropdown-item" onclick="filtrarProducto('Mouse')" type="button">Mouse</button></li>
+                    <li><button id="button-filtro" class="dropdown-item" onclick="filtrarProducto('Motherboards')" type="button">Motherboards</button></li>
+                    <li><button id="button-filtro" class="dropdown-item" onclick="filtrarProducto('RAM')" type="button">Memoria RAM</button></li>
+                    <li><button id="button-filtro" class="dropdown-item" onclick="filtrarProducto('Procesadores')" type="button">Procesadores</button></li>
+                </ul>
+
+            </div>
+            <div class="div-carrito">
+                <ul>
+                    <li><button id="boton-carrito" style="width: 200px; list-style-type: none;" class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Carrito <i class="fas fa-shopping-bag"></i></button></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Cards Productos -->
+    <div class="container-fluid">
+        <div class="d-flex">
+            <div class="col-10 justify-content-around" id="detalles" style="list-style-type: none;"></div>
+        </div>
+    </div>
+
+    <!-- Marcas -->
+    <div class="Marcas">
+        <h3 class="tituloM">Trabajamos con los mejores productos</h3>
+        <div class="marca_w ">
+            <img src="./imagenes/marca.jpg " alt="logo 4 ">
+        </div>
+        <div class="marca_w ">
+            <img src="./imagenes/marca2.jpg " alt="logo 2 ">
+        </div>
+        <div class="marca_w ">
+            <img src="./imagenes/marca3.jpg " alt="logo 3 ">
+        </div>
+        <div class="marca_w ">
+            <img src="./imagenes/marca4.jpg " alt="logo 4 ">
+        </div>
+        <div class="marca_w ">
+            <img src="./imagenes/marca5.jpg " alt="logo 5 ">
+        </div>
+        <div class="marca_w ">
+            <img src="./imagenes/marca6.jpg " alt="logo 6 ">
+        </div>
+        <div class="marca_w ">
+            <img src="./imagenes/marca8.jpg " alt="logo 7 ">
+        </div>
+        <div class="marca_w ">
+            <img src="./imagenes/marca5.jpg " alt="logo 8 ">
+        </div>
+    </div>
+    <!-- Footer-->
+    <footer>
+        <div class="container-footer ">
+            <div class="aboutUs ">
+                <h2 class="titulo-footer ">Atención al cliente</h2>
+                <span>Realiza tu compra online y recibilo en tu domicilio o retira en nuestro local en Mar del
+                    Plata.</span>
+            </div>
+            <div class="socialMedia ">
+                <h2 class="titulo-footer">Redes Sociales</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-lg">Facebook</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram-square fa-lg">Instagram</i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/"><i class="fab fa-youtube-square fa-lg">Youtube</i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="quickboton ">
+                <h2 class="titulo-footer ">Informacion</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Políticas de privacidad</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="contacto ">
+                <h2 class="titulo-footer ">Contactenos</h2>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Uruguay 1612, Mar del Plata, Argentina</span></li>
+                    <li>
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>(0223) 4736666</span>
+                    </li>
+                    <li>
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+549 223444444</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <span>hardwareplace@hotmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-user"></i>
+                        <span>Atención al cliente: Lunes a Viernes de 08:00 a 18:00 hs. Sabados de 08:00 a 13:30 hs.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <span class="copy">&copy;2020.Hardware place (Todos los derechos reservados)</span>
+    </footer>
+
+    <script src="./javascript/filtro.js"></script>
+    <script src="./javascript/tienda.js"></script>
+    <script src="./javascript/item.js"></script>
+    <script src="./javascript/eventos.js"></script>
+    <script src="./javascript/controlador.js"></script>
+    <script src="./javascript/index.js"></script>
+    <script src="https://kit.fontawesome.com/725aa0b04b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
