@@ -2,7 +2,7 @@
 *Sitio web para la compra de componentes de computadoras y otros periféricos.
 
 /*Funcionamiento del sitio*/
-- Se simula un sito web como se suele ver en la actualidad, para la compra de articulos y periféricos de computadoras. Se puede apreciar en el inicio los productos a vender,
+- Se simula un sito web para la compra de articulos y periféricos de computadoras. Se puede apreciar en el inicio los productos a vender,
 con su respectiva descripcion y un botón para poder añadir el producto deseado por el cliente. Una vez que el cliente seleccione el/los productos seleccionados, va a poder chequear los productos que tiene en el carrito con sus especificaciones y cantidad que desea comprar.
 - El sitio cuenta con tres secciones adicionales : "Sobre Nosotros", "contacto", "Registrar".
 - "Sobre Nosotros": Cuenta brevemente la historia de la empresa.
